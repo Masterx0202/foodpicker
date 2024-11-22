@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food picker</title>
+    <link rel="stylesheet" href="/static/css/styles2.css">
+</head>
+<body>
+    <div class="main">
+        <form method="post">
+            <button type="submit" name="action" value="back" class="bck">zurück</button>
+        </form>
+
+        <img src="/static/css/logo.jpg" alt="bild konnte nicht geladen werden">
+        {% if text and not err %}
+        <div>
+            <p style="background-color: green; text-align: center;border-radius: 1.5vw;">{{text}} wurde hinzugefügt</p>
+        </div>
+        {% endif %}
+        {% if err == "error" %}
+            <p style="color:red; text-align: center;">Fehler: Bitte füllen Sie alle Felder aus!</p>
+
+        {% elif err == "error1" %}
+            <p style="color:red; text-align: center;">{{text}} wurde schon hinzugefügt</p>
+
+        {% endif %}
+        <form method="post">
+            <div class="checkbox-group">
+                <input type="radio" id="kinder" name="tag" value="kinder" class="check1">
+                <label for="kinder">Kinder</label>
+                <input type="radio" id="eltern" name="tag" value="eltern" class="check2">
+                <label for="eltern">Eltern</label>
+            </div>
+            <br>
+            <div class="inpt">
+            <input type="text" class="txt" name="text">
+            <input type="submit" class="sbmt" value="hinzufügen">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

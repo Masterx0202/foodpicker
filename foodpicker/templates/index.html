@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Picker</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    
+    <br>
+    <div class="main">
+        <img src="/static/css/logo.jpg" alt="bild konnte nicht geladen werden">      
+        <form method="post">
+            <button type="submit" name="action" value="redrect" class="add">Hinzufügen</button>
+            <br>
+            <div class="checkbox-group">
+                <input type="radio" id="kinder" name="tag" value="kinder" class="check1">
+                <label for="kinder">Kinder</label>
+                <input type="radio" id="eltern" name="tag" value="eltern" class="check2">
+                <label for="eltern">Eltern</label>
+            </div>
+            <br>
+            <button type="submit" name="action" value="search" class="button">Suchen</button>
+        </form>
+        {%if food%}
+        <div class="final">
+            <p>{{food}}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
