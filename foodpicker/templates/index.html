@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+tn<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,18 +10,18 @@
     
     <br>
     <div class="main">
-        <img src="/static/css/logo.jpg" alt="bild konnte nicht geladen werden">      
+        <img src="/static/css/logo.jpg" alt="picture">      
         <form method="post">
-            <button type="submit" name="action" value="redrect" class="add">Hinzufügen</button>
+            <button type="submit" name="action" value="redrect" class="add">add</button>
             <br>
             <div class="checkbox-group">
-                <input type="radio" id="kinder" name="tag" value="kinder" class="check1">
-                <label for="kinder">Kinder</label>
-                <input type="radio" id="eltern" name="tag" value="eltern" class="check2">
-                <label for="eltern">Eltern</label>
+                <input type="radio" id="children" name="tag" value="children" class="check1">
+                <label for="children">children</label>
+                <input type="radio" id="parents" name="tag" value="parents" class="check2">
+                <label for="parents">parents</label>
             </div>
             <br>
-            <button type="submit" name="action" value="search" class="button">Suchen</button>
+            <button type="submit" name="action" value="search" class="button">Pick</button>
         </form>
         {%if food%}
         <div class="final">
